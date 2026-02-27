@@ -2,5 +2,5 @@
 @plugin "daisyui";
 
 .btn-custom {
-  @apply px-4 py-1 bg-slate-800 rounded-lg hover:bg-slate-700 transition;
+  @apply px-4 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-800 rounded-lg transition;
 }
