@@ -1,14 +1,21 @@
 import React from 'react';
 import { FiCheckSquare, FiPlus, FiUpload } from 'react-icons/fi';
-import { Link } from 'react-router';
+import { Link, Navigate, useNavigate } from 'react-router';
 import DashboardNavbar from '../components/Dashboard/DashboardNavbar';
 import { MdDashboard } from 'react-icons/md';
 import { FaTasks } from 'react-icons/fa';
 import { RiTeamFill } from 'react-icons/ri';
 import { IoSettings } from 'react-icons/io5';
 import { IoMdLogOut } from 'react-icons/io';
+import { toast } from 'react-toastify';
 
 const Dashboard = () => {
+    const navigate = useNavigate();
+    const handleLogout=()=>{
+        localStorage.removeItem("isLoggedIn");
+        toast.success("Logout Ok")
+        navigate("/login")
+    }
     return (
         <div>
             <div className='border border-0'>
@@ -37,7 +44,7 @@ const Dashboard = () => {
 
                     </div>
                     <div>
-                        <Link to="/logout" className="flex items-center gap-3 text-xl font-bold m-2 p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
+                        <Link to="/login" onClick={handleLogout} className="flex items-center gap-3 text-xl font-bold m-2 p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
                             <IoMdLogOut /> Logout
                         </Link>
                     </div>
