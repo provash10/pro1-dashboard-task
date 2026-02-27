@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -29,7 +30,9 @@ export const router = createBrowserRouter([
         children:[
             {
                 index: true,
-                element: <Dashboard></Dashboard>
+                element: <PrivateRoute>
+                    <Dashboard></Dashboard>
+                </PrivateRoute>
             }
         ]
     }
