@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+.btn-custom {
+  @apply px-4 py-1 bg-slate-800 rounded-lg hover:bg-slate-700 transition;
+}
