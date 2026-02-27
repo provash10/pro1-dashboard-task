@@ -1,0 +1,97 @@
+Google Doc: https://docs.google.com/document/d/1p-HjGtzSoLtdiqbeQoSApdb6dhQyfli8mRyqJGqrw08/edit
+
+Frontend Intern Dashboard Development Task
+This document outlines the task for the Frontend Intern position. The goal of this assignment is to develop a single-page React frontend application that implements a dashboard page, complete with a login system, based on provided design specifications and a working REST API.
+Task Overview
+The intern is required to develop a React application featuring two main components: a Login Page and a Dashboard Page. The application must accurately reflect the provided design and interact with the designated REST API.
+Required Deliverables
+A functional React application with a Login Page and a Dashboard Page.
+All frontend code must be uploaded to a public GitHub repository.
+Provided Resources
+The following resources will be provided separately to the intern:
+
+Design and Dribbble Link for the Dashboard: https://dribbble.com/shots/25241984-Task-Management-Dashboard 
+REST API Link for Data: https://task-api-eight-flax.vercel.app/ 
+Submission Form Link: The task must be submitted using the following Google Form: https://forms.gle/j3mAyzzWA5vjcaQJ8 
+Implementation Details
+1. The Login Page
+The Login Page must be the entry point of the application.
+Implement the form fields and layout as specified in the provided design.
+Use the provided REST API for user authentication (login).
+2. The Dashboard Page
+The Dashboard Page should only be accessible after a successful login.
+Develop the dashboard layout and components based on the provided design.
+Fetch and display data from the REST API to populate the dashboard elements.
+3. Technology Stack
+Framework: React (using any modern setup, e.g., Vite, Create React App).
+Styling: Any modern styling solution (e.g., Styled Components, Tailwind CSS, or standard CSS/Sass) is acceptable, but it must adhere to the design.
+Evaluation Criteria
+The submission will be evaluated based on the following criteria:
+
+Criterion
+Weight
+Description
+Design Accuracy
+High
+How closely the implemented dashboard matches the provided design.
+Functionality
+High
+Correct implementation of the login mechanism and proper display/handling of data from the REST API.
+Code Quality
+Medium
+Readability, organization, and best practices (e.g., component structure, state management).
+Responsiveness
+Medium
+Application display across different screen sizes.
+Bonus: Modern Aesthetics
+Bonus
+Implementation of beautiful and modern animations and transitions.
+Bonus: Proper Authentication
+Bonus
+Correct implementation of persistent and secure authentication (e.g., using tokens, private routes).
+
+Submission Instructions
+Commit and push all source code to a public GitHub repository.
+Ensure your application is deployed.
+Submit the link to your GitHub repository and any deployment link using the designated submission form .
+
+For Bonus task (Authentication):
+Login Endpoint: /api/login
+Method: POST
+Body: 
+```
+  "email": "user1@example.com",
+  "password": "password123"
+```
+Response:
+```
+{
+  "id": 1,
+  "email": "user1@example.com",
+  "token": "<jwt_token>"
+}
+```
+
+Please direct any queries regarding the task to muntahi1212@gmail.com .
+
+Submission Deadline: Feb 28, 2026 10:00 PM GMT+6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
