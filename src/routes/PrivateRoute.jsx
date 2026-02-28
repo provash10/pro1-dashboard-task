@@ -1,13 +1,20 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { Navigate} from 'react-router';
 
 const PrivateRoute = ({children}) => {
-    const navigate=useNavigate();
-    const isLoggedIn =localStorage.getItem("isLoggedIn");
+    // const navigate=useNavigate();
+    // const isLoggedIn =localStorage.getItem("isLoggedIn");
     
-    if(!isLoggedIn){
-        return navigate("/login");
+    // if(!isLoggedIn){
+    //     return navigate("/login");
+    // }
+    const token =localStorage.getItem("token");
+    
+    if(!token){
+        // return navigate("/login");
+        return <Navigate to="/login" replace />
     }
+
     return children;
 };
 

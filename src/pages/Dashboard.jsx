@@ -8,11 +8,14 @@ import { RiTeamFill } from 'react-icons/ri';
 import { IoSettings } from 'react-icons/io5';
 import { IoMdLogOut } from 'react-icons/io';
 import { toast } from 'react-toastify';
+import Sidebar from '../components/Dashboard/Sidebar';
+import DashboardData from '../components/Dashboard/DashboardData';
 
 const Dashboard = () => {
     const navigate = useNavigate();
     const handleLogout=()=>{
-        localStorage.removeItem("isLoggedIn");
+        // localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("token");
         toast.success("Logout Ok")
         navigate("/login")
     }
@@ -25,24 +28,8 @@ const Dashboard = () => {
             <div className='flex min-h-screen  bg-slate-900 border-b border-slate-800'>
                 {/* sidebar */}
                 <aside className='flex flex-col justify-between w-64 text-white text-xl  bg-slate-900 border-r border-slate-800'>
-                    <div>
-                        <h1 className="text-xl font-bold p-2 border-b border-slate-800">Task Manager</h1>
+                    <Sidebar></Sidebar>
 
-                        <Link to="/dashboard" className="flex items-center gap-3 text-xl font-bold m-2 p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
-                            <MdDashboard/> Dashboard
-                        </Link>
-                        <Link to="/tasks" className="flex items-center gap-3 text-xl font-bold m-2 p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
-                            <FaTasks /> Tasks
-                        </Link>
-                        <Link to="/teams" className="flex items-center gap-3 text-xl font-bold m-2 p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
-                            <RiTeamFill /> Teams
-                        </Link>
-                        <Link to="/settings" className="flex items-center gap-3 text-xl font-bold m-2 p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
-                            <IoSettings /> Settings
-                        </Link>
-
-
-                    </div>
                     <div>
                         <Link to="/login" onClick={handleLogout} className="flex items-center gap-3 text-xl font-bold m-2 p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
                             <IoMdLogOut /> Logout
@@ -66,6 +53,10 @@ const Dashboard = () => {
                     </div>
                 </div>
                 {/* main part */}
+
+                <div>
+                    <DashboardData></DashboardData>
+                </div>
               </div>
 
             </div>
